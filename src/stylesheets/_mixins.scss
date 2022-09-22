@@ -1,0 +1,61 @@
+// all the rules will be comppiled to IE specific non-responsive css file.
+@mixin ModernBrowser() {
+  @content;
+}
+
+// all the rules will be comppiled to IE specific non-responsive css file.
+@mixin OldIE() {
+  @content;
+}
+
+@mixin MediaQueries($mediaquery) {
+  @media #{$mediaquery} {
+    @content;
+  }
+}
+
+@mixin font($fontSize, $fontWeight, $color, $line-height, $letter-spacing) {
+  @if $fontSize {
+    font-size: $fontSize;
+  }
+
+  @if $fontWeight {
+    font-weight: $fontWeight;
+  }
+
+  @if $color {
+    color: $color;
+  }
+
+  @if $line-height {
+    line-height: $line-height;
+  }
+
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing;
+  }
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}

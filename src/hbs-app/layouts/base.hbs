@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" role="heading" aria-level="1">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <meta name="description" content="{{description}}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/app.bundle.css">
+</head>
+
+<body data-comp-prefix="app-js__">
+    <a href="#main" class="hide-from__screen skipToMain">Skip to main content</a>
+    <div class="page-wrap">
+        {{> header }}
+        <main role="main" id="main" tabindex="-1" class="main-content">
+            {% body %}
+        </main>
+        {{> footer }}
+    </div>
+    <script src="./js/app.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+// Fonts
+$font_sterling_display_roman: 'SterlingDisplay Roman';
+$font_sterling_display_italic: 'SterlingDisplay Italic';
+$font_santral_bold: 'Taner Ardali - Santral Bold';
+$font_santral_bold_italic: 'Taner Ardali - Santral BoldItalic';
+$font_santral_regular: 'Taner Ardali - Santral Regular';
+$font_santral_regular_italic: 'Taner Ardali - Santral RegularItalic';
+$font_santral_semi_bold: 'Taner Ardali - Santral SemiBold';
+$font_santral_semi_bold_italic: 'Taner Ardali - Santral SemiBoldItalic';
+$font_santral_light: 'Taner Ardali - Santral-Light';
+$font_santral_light_italic: 'Taner Ardali - Santral-LightItalic';
+
+// Font Sizes
+// 1rem = 16px;
+// use https://www.ninjaunits.com/converters/pixels/pixels-rem/ to convert
+$font-size-8: 0.5rem;
+$font-size-9: 0.562rem;
+$font-size-10: 0.625rem;
+$font-size-12: 0.75rem;
+$font-size-14: 0.875rem;
+$font-size-16: 1rem;
+$font-size-18: 1.125rem;
+$font-size-22: 1.375rem;
+$font-size-24: 1.5rem;
+$font-size-32: 2rem;
+$font-size-40: 2.5rem;
+$font-size-56: 3.5rem;
+$font-weight-light: 300;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+$font-weight-500: 500;
+$font-weight-600: 600;
+// Colors
+// Variables Name Tool `Name That Color`
+// http://chir.ag/projects/name-that-color/
+// Blues
+
+$bd-blue: #004593;
+$transparent: rgba(0, 0, 0, 0);
+// Whites
+$white: rgb(255, 255, 255); //#ffffff;
+$whiteSmoke: rgb(245, 245, 245); //#f5f5f5;
+$dullWhite: rgb(229, 229, 229); //#e5e5e5
+// Gray
+$snow: rgb(250, 250, 250); //#fafafa;
+$whisper: rgb(228, 228, 228); //#e4e4e4;
+$dim-gray: rgb(112, 112, 112); //#707070;
+$mineshaft: rgb(56, 56, 56); // #383838
+$gray: rgb(126, 126, 126); // #7E7E7E
+$grayshade: rgba(0, 0, 0, 0.04);
+$boulder: rgb(118, 118, 118); //#767676;
+$filter-gray: rgb(118, 118, 118); //#767676;
+$icon-gray: rgb(118, 118, 118); //#767676;
+$greyNickel: rgb(181, 179, 173); //#b5b3ad
+$placeholder-gray: rgb(149, 149, 149); // #959595
+$suva-gray: rgb(147, 147, 147); // #939393
+$friar-gray: rgb(118, 118, 111); //#76766F
+$dusty-gray: rgb(149, 149, 149); //#959595
+
+//Blacks
+$black: rgb(0, 0, 0); //#000000;
+// Whites
+$white: rgb(255, 255, 255); // #FFFFF
+$warm-gray: rgb(151, 151, 151); //#979797
+$dim-white: rgb(216, 216, 216); // #d8d8d8
+$dim-white-shade: rgba(216, 216, 216, 0.4); // #d8d8d8
+// Red
+$red: rgb(255, 0, 0); // #ff0000
+$monza: rgb(208, 2, 27); //#D0021B
+$crimson-red: rgb(227, 31, 38); //#e31f26
+
+// ****************************************
+// media-queries
+// ****************************************
+/*
+Mobile: Small
+min: 320 portrait
+max: 600 landscape
+
+Tablet: Medium
+601 - 800 portrait
+
+Tablet landscape / Desktop: Large
+801 - 900
+
+Desktop: xLarge
+901 - 1600
+*/
+
+// breakpoints
+$mq__iphone-se-min: 20em; // 20x16 = 320px
+$mq__xsmall: 30em; // 30x16 = 480px
+$mq__xsmall-min: ($mq__xsmall + 0.0625); // 481px
+$mq__small: 37.5em; // 37.5x16 = 600px
+$mq__small-min: ($mq__small + 0.0625); // 601px
+$mq__ipad-min: 47.938em; // 767px
+$mq__ipad: 48em; // 768px
+$mq__medium: 50em; // 50x16 = 800px
+$mq__medium-min: ($mq__medium + 0.0625); // 801px
+$mq__large: 56.18em; // 56.18x16 = 899px
+$mq__large-min: ($mq__large + 0.0625); // 901px
+$mq__mlarge: 90em; // 90x16   = 1440px
+$mq__xlarge: 100em; // 100x16   = 1600px
+$screen: unquote('only screen');
+$internetExplorer: unquote('(-ms-high-contrast: none), (-ms-high-contrast: active)');
+$landscape: unquote('#{$screen} and (orientation: landscape)');
+$portrait: unquote('#{$screen} and (orientation: portrait)');
+$x-small: unquote('#{$screen} and (max-width: #{$mq__xsmall})');
+$small: unquote('#{$screen} and (min-width: #{$mq__xsmall-min}) and (max-width: #{$mq__small})');
+$mobile-small: unquote('#{$screen} and (max-width: #{$mq__iphone-se-min})');
+$mobile: unquote('#{$screen} and (max-width: #{$mq__small})');
+$below-ipad: unquote('#{$screen} and (max-width: #{$mq__ipad-min})');
+$ipad-and-above: unquote('#{$screen} and (min-width: #{$mq__ipad})');
+$tablet-and-below: unquote('#{$screen} and (max-width: #{$mq__medium})');
+$tablet-above: unquote('#{$screen} and (min-width: #{$mq__medium-min})');
+$tablet-medium-and-below: unquote('#{$screen} and (max-width: #{$mq__medium})');
+$tablet-large-and-below: unquote('#{$screen} and (max-width: #{$mq__large})');
+$tablet: unquote('#{$screen} and (min-width: #{$mq__small-min}) and (max-width: #{$mq__large})');
+$tablet-and-above: unquote('#{$screen} and (min-width: #{$mq__small-min})');
+$desktop-and-below: unquote('#{$screen} and (max-width: #{$mq__large})');
+$desktop: unquote('#{$screen} and (min-width: #{$mq__medium-min}) and (max-width: #{$mq__large})');
+$desktop-medium: unquote(
+  '#{$screen} and (min-width: #{$mq__large-min}) and (max-width: #{$mq__mlarge})'
+);
+$desktop-and-above: unquote('#{$screen} and (min-width: #{$mq__large})');
+$xlarge-and-below: unquote('#{$screen} and (max-width: #{$mq__large-min})');
+$xlarge: unquote('#{$screen} and (min-width: #{$mq__large-min}) and (max-width: #{$mq__xlarge})');
+$xlarge-and-above: unquote('#{$screen} and (min-width: #{$mq__large-min})');
+$retina: unquote(
+  '#{$screen} and (-webkit-min-device-pixel-ratio: 2), #{$screen} and (min--moz-device-pixel-ratio: 2), #{$screen} and (-o-min-device-pixel-ratio: 2/1), #{$screen} and (min-device-pixel-ratio: 2), #{$screen} and (min-resolution: 192dpi), #{$screen} and (min-resolution: 2dppx)'
+);
+$between-desktop-tablet: unquote(
+  '#{$screen} and (min-width: #{$mq__medium-min}) and (max-width: 64em)'
+); // 800px - 1024px
+$tablet-and-between-desktop-tablet: unquote(
+  '#{$screen} and (min-width: #{$mq__small-min}) and (max-width: 64em)'
+); // 601px - 1024px
+$below-desktop-tablet: unquote('#{$screen} and (max-width: 63.938em)'); // <1024px
+$desktop-tablet-and-above: unquote('#{$screen} and (min-width: 64em)'); // >=1024px
+$tablet-max: unquote('#{$screen} and (max-width: 79.938em)'); // 1279px
+$desktop-tablet-above-and-tablet-max: unquote(
+  '#{$screen} and (min-width: 64em) and (max-width: 79.938em)'
+); // 1024px - 1279px
+$desktop-min: unquote(
+  '#{$screen} and (min-width: 80em)'
+); // http://gs.statcounter.com/screen-resolution-stats/desktop/worldwide
+$small: unquote('#{$screen} and (max-width: 20em)');
+$above-large-desktop: unquote('#{$screen} and (min-width: #{$mq__xlarge})');
+$desktop-above-medium: unquote('#{$screen} and (min-width: #{$mq__mlarge})');
+$print: unquote('print');
+$pdp_tablet_break: 899px;
+$desktop_max_break: 1600px;
+
+// global paddings
+$padding-multiple: 8px;
+
+//modal zIndex
+$modal-maxZIndex: 99;
+
+/* stylelint-disable */
+:export {
+  belowdesktoptablet: $below-desktop-tablet;
+  desktopandabove: $desktop-and-above;
+  desktopandbelow: $desktop-and-below;
+  desktopmin: $desktop-min;
+  desktoptabletabove: $desktop-tablet-and-above;
+  ipadabove: $ipad-and-above;
+  ipadbelow: $below-ipad;
+  mobile: $mobile;
+  tabletandabove: $tablet-above;
+  tabletandbelow: $tablet-and-below;
+  tabletmax: $tablet-max;
+}
+/* stylelint-enable */
+
+// Variables related to materialize input
+$placeholder-text-color: $boulder;
+$input-border: 1px solid $black;
+$input-border-color: $boulder;
+$input-height: $font-size-16;
+$input-font-size: $font-size-16;
+$input-margin: 0;
+$input-padding: 8px 0;
+$input-disabled-color: $dim-gray;
+$input-disabled-border: $dim-gray;
+$input-focus-color: $black;
+$input-success-color: $black;
+$input-error-color: $red;
+$input-invalid-border: 1px solid $red;
+$gutter-width: 16px;
+$input-icon-size: $font-size-16;
+$medium-and-down: $desktop-and-below;
+$small-and-down: $tablet-and-below;
+$input-background: $transparent;
+$input-focus-border-color: $transparent;
+$dropdown-item-height: 42px;
